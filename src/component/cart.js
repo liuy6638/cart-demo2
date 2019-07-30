@@ -38,6 +38,8 @@ class Cart extends Component {
                     ￥{this.props.info.total}
                     <button onClick={this.buy.bind(this)}>购买</button>
                 </div>
+                <div className='home'>
+                </div>
             </div>
         )
     }

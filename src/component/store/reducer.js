@@ -9,10 +9,11 @@ const store = {
 }
 
 const reducer = (state = store, action) => {
+    console.log(state)
     switch (action.type) {
         case 'select':
             const target_list = state.list[action.index];
-            const num = target_list.num ? ++target_list.num : 1
+            const num = target_list.num = 1
             state.select === undefined ? Object.assign(state.select = []) : console.log(state.select)
             state.select.splice(state.select.length, 1, Object.assign(target_list, { num }))
             state.total === undefined ? Object.assign(state.total = 0) : console.log(state.total)
@@ -36,12 +37,12 @@ const reducer = (state = store, action) => {
             state.buy[index] = Object.assign({})
             state.buy[index].kind = Object.assign([state.select.length])
             const today = new Date()
-            const data = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            const data = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getHours() + '-' + today.getMinutes() + '-' + today.getSeconds();
             state.buy[index].time = Object.assign([data])
-            state.buy[index].info = Object.assign(target_buy)
+            state.buy[index].info = target_buy
             state.buy[index].total = Object.assign([state.total])
-            state.select = Object.assign([])
-            state.total = Object.assign('')
+            state.select = []
+            state.total = 0
             return { ...state, select: state.select, total: state.total, buy: state.buy }
         default:
             return state
