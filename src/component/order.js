@@ -24,10 +24,10 @@ class Order extends Component {
                                             <div className='barrr' key={index}>
                                                 <p>{info.name}</p>
                                                 <img src={info.src} alt=''></img>
-                                                <span className='jmrr'>价格：{info.price}</span>
+                                                <span className='jmrr'>￥：{info.price}</span>
                                                 <span className='jmrr '>码数：{info.mashu}</span>
                                                 <span className='jmrr'>件数：{info.num} </span>
-                                                <span className='jmrr'>￥{info.num * info.price} </span>
+                                                <span className='jmrr'>总计：{info.num * info.price} 元</span>
                                             </div>
                                     )
                                 })}

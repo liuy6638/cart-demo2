@@ -17,7 +17,7 @@ class Cart extends Component {
     render() {
         const infos = this.props.info.select || []
         return (
-            <div className='cart'>
+            <div className='cartt'>
                 {infos.map((info, index) => {
                     return (
                         <div className='barr' key={index}>
@@ -34,8 +34,8 @@ class Cart extends Component {
                         </div>
                     )
                 })}
-                <div className='cart'>
-                    ￥{this.props.info.total}
+                <div className='ccart'>
+                    ￥{this.props.info.total}   
                     <button onClick={this.buy.bind(this)}>购买</button>
                 </div>
                 <div className='home'>

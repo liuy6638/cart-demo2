@@ -10,7 +10,7 @@ class Home extends Component {
     render() {
         const infos = this.props.info.list
         return (
-            <div className='home'>
+            <div className='homee'>
                 {infos.map((info, index) => {
                     return (
                         <div className='bar' key={index}>
