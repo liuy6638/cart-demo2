@@ -44,6 +44,9 @@ const reducer = (state = store, action) => {
             state.select = []
             state.total = 0
             return { ...state, select: state.select, total: state.total, buy: state.buy }
+        case 'delete':
+            state.buy.splice(action.index, 1)
+            return { ...state, buy: state.buy}
         default:
             return state
     }

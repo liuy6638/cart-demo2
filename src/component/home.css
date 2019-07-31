@@ -1,10 +1,10 @@
 
 .bar{
-    width: 22%;
+    width: 23%;
     /* height: 340px; */
     display: block;
     float: left ;
-    margin: 10px;
+    margin: 10px 15px;
     padding: 10px;
     border: 1px solid gray;
 }

@@ -3,10 +3,11 @@ import './store/connect'
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from './store/connect'
 import './order.css'
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class Order extends Component {
-    detail = () => {
-
+    delete = (index) => {
+        this.props.Delete(index)
     }
     render() {
         const infos = this.props.info.buy || []
@@ -18,6 +19,7 @@ class Order extends Component {
                             <div className='time qq'>日期：{info.time[0]}</div>
                             <div className='kind qq'>种类：{info.kind[0]}</div>
                             <div className='total qq'>总额：{info.total[0]}</div>
+                            <DeleteIcon onClick={ this.delete.bind(this, index) } className='qq'></DeleteIcon>
                             <div className='info ww'>
                                 {(info.info).map((info, index) => {
                                     return (

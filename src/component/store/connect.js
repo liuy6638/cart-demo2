@@ -9,7 +9,8 @@ export const mapDispatchToProps = (dispatch) => {
         select: (index) => dispatch({type: 'select', index}),
         Increase: (index) => dispatch({type: 'add', index}),
         Decrease: (index) => dispatch({type: 'reduce', index}),
-        Buy: () => dispatch({type: 'buy'})
+        Buy: () => dispatch({type: 'buy'}),
+        Delete: (index) => dispatch({type: 'delete', index})
     }
 }
 

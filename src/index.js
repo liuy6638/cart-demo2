@@ -4,14 +4,16 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import Footbar from './component/footbar'
+// import Footbar from './component/footbar'
 import reducer from './component/store/reducer'
+import Routes from "./component/routes"
 
 const store = createStore(reducer)
 
 ReactDOM.render(
     <Provider store = {store}>
-            <Footbar />
+        <Routes />
+            {/* <Footbar /> */}
     </Provider>
 , document.getElementById('root'));
 

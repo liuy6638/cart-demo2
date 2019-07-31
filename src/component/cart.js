@@ -3,6 +3,7 @@ import './store/connect'
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from './store/connect'
 import './cart.css'
+import Button from '@material-ui/core/Button'
 
 class Cart extends Component {
     add = (index) => {
@@ -36,7 +37,7 @@ class Cart extends Component {
                 })}
                 <div className='ccart'>
                     ￥{this.props.info.total}   
-                    <button onClick={this.buy.bind(this)}>购买</button>
+                    <Button onClick={this.buy.bind(this)} variant='contained'>购买</Button>
                 </div>
                 <div className='home'>
                 </div>

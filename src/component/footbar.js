@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import router from "./router"
+import { Link } from "react-router-dom";
 import "./footbar.css"
 
 class Footbar extends Component {
     render() {
         return (
-            <Router>
                 <div className='footbar'>
                     <div className='home'>
                         <Link to='/'>主页</Link>
@@ -21,18 +19,6 @@ class Footbar extends Component {
                         <Link to='/mine'>我的</Link>
                     </div>
                 </div>
-                {router.map(({ path, exact = true, componentName }, index) => {
-                    return (
-                        <Route
-                            path={path}
-                            exact={exact}
-                            component={componentName}
-                            key={index}
-                        />
-                    )
-
-                })}
-            </Router>
         )
     }
 }
